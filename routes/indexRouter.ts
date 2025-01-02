@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { displayMessages } from "../controllers/indexController";
+import { getMessages } from "../controllers/indexController";
 
 const indexRouter = Router();
 
-indexRouter.get("/", displayMessages);
+indexRouter.get("/", getMessages);
 
 export default indexRouter;
