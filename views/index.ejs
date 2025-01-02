@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title><%= locals.title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1><%= locals.title %></h1>
+    <main>
+      <% for (const message of locals.messages) { %>
+      <div>
+        <p><%= message.user %></p>
+        <span><%= message.added %></span>
+        <p><%= message.text %></p>
+      </div>
+      <% } %>
+    </main>
+  </body>
+</html>
