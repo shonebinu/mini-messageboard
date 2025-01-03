@@ -12,7 +12,7 @@
       <a href="/new">Add Your Message</a>
       <section>
         <% for (const message of locals.messages) { %>
-        <div>
+        <div class="messageContainer">
           <p class="user"><%= message.user %></p>
           <p class="date"><%= message.added %></p>
           <p class="message"><%= message.text %></p>

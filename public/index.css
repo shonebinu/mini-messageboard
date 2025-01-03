@@ -28,7 +28,7 @@ section {
 div {
   border: 1px solid #e5e5e5;
   border-radius: 0.2rem;
-  padding: 0.5rem;
+  padding: 0.75rem;
 }
 
 .user {
@@ -48,4 +48,12 @@ div {
   margin-bottom: 0;
   font-size: 0.95rem;
   margin-top: 0;
+}
+
+.messageContainer {
+  transition: 100ms;
+
+  &:hover {
+    border-color: #525252;
+  }
 }
