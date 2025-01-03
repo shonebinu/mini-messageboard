@@ -1,13 +1,13 @@
 const messages = [
   {
-    text: "Hi there!",
+    text: "Hi there!, What's up y'all?",
     user: "Amando",
-    added: new Date(),
+    added: new Date().toLocaleDateString(),
   },
   {
-    text: "Hello World!",
+    text: "Hello World!, Come here and see my new creation...",
     user: "Charles",
-    added: new Date(),
+    added: new Date().toLocaleDateString(),
   },
 ];
 

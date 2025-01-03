@@ -1,0 +1,72 @@
+@import "base.css";
+
+main > form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 450px;
+}
+
+@media (max-width: 600px) {
+  main > form {
+    min-width: initial;
+  }
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+label {
+  margin-bottom: 0.3rem;
+}
+
+input,
+textarea {
+  background: #fafafa;
+  border: 2px solid #e5e5e5;
+  border-radius: 5px;
+  height: 2.25rem;
+  color: #0a0a0a;
+  padding-left: 0.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  height: 70px;
+}
+
+a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #3b82f6;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: #444;
+  color: #fafafa;
+  border: 2px solid #444;
+  border-radius: 5px;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e5e5e5;
+  color: #0a0a0a;
+  border: 2px solid #a3a3a3;
+  transition: 0.3s;
+}
+
+button:active {
+  transform: scale(1.05);
+}

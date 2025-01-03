@@ -13,7 +13,7 @@ const createMessage: RequestHandler = asyncErrorHandler(async (req, res) => {
   messages.push({
     text: authorMessage,
     user: authorName,
-    added: new Date(),
+    added: new Date().toLocaleDateString(),
   });
   res.redirect("/");
 });
