@@ -3,8 +3,8 @@ import asyncErrorHandler from "../utils/asyncErrorHandler";
 import { RequestHandler } from "express";
 
 const getMessages: RequestHandler = asyncErrorHandler(async (req, res) => {
-  const sortedMessages = messages.toSorted(
-    (a, b) => new Date(b.added) - new Date(a.added)
+  const sortedMessages = [...messages].sort(
+    (a, b) => new Date(b.added).getTime() - new Date(a.added).getTime()
   );
 
   res.render("index", {
