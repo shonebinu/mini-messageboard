@@ -38,17 +38,6 @@ textarea {
   height: 70px;
 }
 
-a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: #3b82f6;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 button {
   font-family: inherit;
   font-size: 0.95rem;

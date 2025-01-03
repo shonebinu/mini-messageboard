@@ -1,16 +1,5 @@
 @import "base.css";
 
-main > a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: #3b82f6;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 section {
   display: flex;
   flex-direction: column;
