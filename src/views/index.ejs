@@ -14,7 +14,7 @@
         <% for (const message of locals.messages) { %>
         <div class="messageContainer">
           <p class="user"><%= message.user %></p>
-          <p class="date"><%= message.added %></p>
+          <p class="date"><%= message.added.toLocaleDateString() %></p>
           <p class="message"><%= message.text %></p>
         </div>
         <% } %>
