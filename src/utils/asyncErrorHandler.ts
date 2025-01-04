@@ -1,4 +1,4 @@
-import { RequestHandler } from "express";
+import type { RequestHandler } from "express";
 
 const asyncErrorHandler = (func: RequestHandler): RequestHandler => {
   return (req, res, next) => {

@@ -1,6 +1,6 @@
-import { messages } from "../data";
-import asyncErrorHandler from "../utils/asyncErrorHandler";
-import { RequestHandler } from "express";
+import { messages } from "../data.js";
+import asyncErrorHandler from "../utils/asyncErrorHandler.js";
+import type { RequestHandler } from "express";
 
 const getMessages: RequestHandler = asyncErrorHandler(async (req, res) => {
   const sortedMessages = [...messages].sort(

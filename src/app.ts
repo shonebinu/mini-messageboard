@@ -1,14 +1,14 @@
-import express, { ErrorRequestHandler } from "express";
-import indexRouter from "./routes/indexRouter";
-import newRouter from "./routes/newRouter";
+import express, { type ErrorRequestHandler } from "express";
+import indexRouter from "./routes/indexRouter.js";
+import newRouter from "./routes/newRouter.js";
 import path from "node:path";
 
 const app = express();
 
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(import.meta.dirname, "../views"));
 app.set("view engine", "ejs");
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(import.meta.dirname, "../public")));
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/", indexRouter);

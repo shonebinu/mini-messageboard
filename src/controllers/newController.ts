@@ -1,6 +1,6 @@
-import asyncErrorHandler from "../utils/asyncErrorHandler";
-import { RequestHandler } from "express";
-import { messages } from "../data";
+import asyncErrorHandler from "../utils/asyncErrorHandler.js";
+import type { RequestHandler } from "express";
+import { messages } from "../data.js";
 
 const getNewMessageForm: RequestHandler = asyncErrorHandler(
   async (req, res) => {
