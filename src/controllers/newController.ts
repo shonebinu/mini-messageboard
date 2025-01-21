@@ -1,12 +1,13 @@
-import asyncErrorHandler from "../utils/asyncErrorHandler.js";
 import type { RequestHandler } from "express";
-import db from "../db/queries.js";
 import { body, validationResult } from "express-validator";
+
+import db from "../db/queries.js";
+import asyncErrorHandler from "../utils/asyncErrorHandler.js";
 
 const getNewMessageForm: RequestHandler = asyncErrorHandler(
   async (req, res) => {
     res.render("form");
-  }
+  },
 );
 
 const validateMessage = [

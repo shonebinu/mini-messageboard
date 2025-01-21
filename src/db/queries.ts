@@ -9,7 +9,7 @@ async function getMessages() {
 async function insertMessage(user: string, text: string, added: Date) {
   await pool.query(
     `INSERT INTO messages ("user", text, added) VALUES ($1, $2, $3)`,
-    [user, text, added]
+    [user, text, added],
   );
 }
 

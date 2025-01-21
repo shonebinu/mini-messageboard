@@ -1,7 +1,8 @@
 import { Router } from "express";
+
 import {
-  getNewMessageForm,
   createMessage,
+  getNewMessageForm,
 } from "../controllers/newController.js";
 
 const newRouter = Router();

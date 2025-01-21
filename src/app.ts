@@ -1,7 +1,9 @@
+import path from "node:path";
+
 import express, { type ErrorRequestHandler } from "express";
+
 import indexRouter from "./routes/indexRouter.js";
 import newRouter from "./routes/newRouter.js";
-import path from "node:path";
 
 const app = express();
 
