@@ -10,7 +10,7 @@ const getNewMessageForm: RequestHandler = asyncErrorHandler(
   },
 );
 
-const validateMessage = [
+const validateMessage: RequestHandler[] = [
   body("authorName")
     .trim()
     .notEmpty()
@@ -23,8 +23,8 @@ const validateMessage = [
     .withMessage("Message shouldn't be empty"),
 ];
 
-const createMessage = [
-  validateMessage,
+const createMessage: RequestHandler[] = [
+  ...validateMessage,
   asyncErrorHandler(async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
