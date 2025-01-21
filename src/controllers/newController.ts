@@ -15,7 +15,7 @@ const validateMessage = [
     .trim()
     .notEmpty()
     .withMessage("Name shouldn't be empty")
-    .isAlpha()
+    .isAlpha("en-US", { ignore: " " })
     .withMessage("Name should only contain letters."),
   body("authorMessage")
     .trim()
