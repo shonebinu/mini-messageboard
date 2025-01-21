@@ -1,6 +1,6 @@
 import asyncErrorHandler from "../utils/asyncErrorHandler.js";
 import type { RequestHandler } from "express";
-import { messages } from "../data.js";
+import db from "../db/queries.js";
 
 const getNewMessageForm: RequestHandler = asyncErrorHandler(
   async (req, res) => {
@@ -10,11 +10,7 @@ const getNewMessageForm: RequestHandler = asyncErrorHandler(
 
 const createMessage: RequestHandler = asyncErrorHandler(async (req, res) => {
   const { authorName, authorMessage } = req.body;
-  messages.push({
-    text: authorMessage,
-    user: authorName,
-    added: new Date(),
-  });
+  db.insertMessage(authorName, authorMessage, new Date());
   res.redirect("/");
 });
 

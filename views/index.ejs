@@ -11,13 +11,15 @@
     <main>
       <a href="/new">Add Your Message</a>
       <section>
-        <% for (const message of locals.messages) { %>
+        <% if (locals.messages.length === 0) { %>
+        <p>No messages</p>
+        <% } else { %> <% for (const message of locals.messages) { %>
         <div class="messageContainer">
           <p class="user"><%= message.user %></p>
           <p class="date"><%= message.added.toLocaleDateString() %></p>
           <p class="message"><%= message.text %></p>
         </div>
-        <% } %>
+        <% } %> <% } %>
       </section>
     </main>
   </body>
