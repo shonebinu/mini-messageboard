@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", indexRouter);
 app.use("/new", newRouter);
 
-// 404 Middleware
+// 404 Middleware, it catches all the requests that hasn't been resolved.
 app.use((req, res) => {
   res.status(404).render("404", { url: req.originalUrl });
 });
